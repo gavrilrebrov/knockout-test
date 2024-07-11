@@ -1,0 +1,37 @@
+@import './vars.scss';
+
+body {
+  margin: 0;
+  font-family: 'Fira Sans';
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+#app {
+  padding: 50px 30px;
+  width: 100%;
+}
+
+.icon {
+  display: inline-block;
+  transition: transform cubic-bezier(0.4, 0, 0.2, 1) 150ms;
+  color: $color-icon;
+
+  &_switcher {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+  }
+
+  &_dragger {
+    width: 8px;
+    height: 15px;
+    cursor: move;
+  }
+
+  &_rotated {
+    transform: rotate(180deg);
+  }
+}

@@ -1,0 +1,21 @@
+@import '../../assets/scss/vars.scss';
+
+.item {
+  padding: 9px 16px 11px 15px;
+  border: 1px solid $color-border;
+  margin-top: -1px;
+  display: flex;
+  align-items: center;
+  background: white;
+
+  &__label {
+    flex-grow: 1;
+    font-size: 13px;
+    line-height: 14px;
+  }
+
+  &__dragger {
+    display: flex;
+    align-items: center;
+  }
+}

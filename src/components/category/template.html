@@ -1,0 +1,52 @@
+<div class="category">
+  <div class="category__block">
+    <div class="category__switcher">
+      <i class="icon icon_switcher"
+        data-bind="
+          html: $root.icons.switcher,
+          click: toggle,
+          css: {
+            'icon_rotated': !opened()
+          }
+        "
+      ></i>
+    </div>
+
+    <div class="category__label"
+      data-bind="text: name"
+    ></div>
+
+    <div class="category__dragger">
+      <i class="icon icon_dragger"
+        data-bind="
+          html: $root.icons.dragger,
+        "
+      ></i>
+    </div>
+  </div>
+
+  <div class="category__items"
+    data-bind="
+      css: {
+        'category__items_opened': opened(),
+      }
+    "
+  >
+    <div class="category__items-container"
+      data-bind="
+        sortable: {
+          data: items,
+          connectClass: 'sortable-items',
+          options: {
+            start: onDragStart,
+            stop: onDragStop,
+            sort: onDragSort,
+            handle: '.item__dragger'
+          },
+        }
+      "
+    >
+      <item params="name: $data" />
+    </div>
+  </div>
+</div>

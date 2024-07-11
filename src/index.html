@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Knockout</title>
+</head>
+<body>
+  <div id="app">
+    <div 
+      data-bind="
+        sortable: {
+          data: categories,
+          options: {
+            start: onDragStart,
+            stop: onDragStop,
+            sort: onDragSort,
+            handle: '.category__dragger'
+          }
+        }
+      "
+    >
+      <category params="name: name, items: items, opened: opened" />
+    </div>
+  </div>
+</body>
+</html>

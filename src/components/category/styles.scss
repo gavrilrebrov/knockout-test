@@ -1,0 +1,42 @@
+@import '../../assets/scss/vars.scss';
+
+.category {
+  margin-top: -1px;
+
+  &__block {
+    display: flex;
+    align-items: center;
+    padding: 13px 16px;
+    border: 1px solid $color-border;
+    background: white;
+    position: relative;
+    width: 100%;
+    z-index: 20;
+    gap: 14px;
+  }
+
+  &__label {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 16px;
+    flex-grow: 1;
+  }
+
+  &__items {
+    padding-left: 16px;
+    position: relative;
+    height: auto;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all cubic-bezier(0.4, 0, 0.2, 1) 150ms;
+
+    &_opened {
+      max-height: 200px;
+      overflow: visible;
+    }
+
+    &-container {
+      min-height: 5px;
+    }
+  }
+}
